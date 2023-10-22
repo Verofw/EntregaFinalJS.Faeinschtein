@@ -61,8 +61,8 @@ function dibujarTabla() {
         </tr>
         <tr>
             <td>
-                <button type="button" class="btn btn-primary" id="checkout">CheckOut</button>
                 <button type="button" class="btn btn-danger" id="vaciarCarrito">Vaciar Carrito</button>
+                <button type="button" class="btn btn-primary" id="checkout">CheckOut</button>
             </td>
         </tr>
     `;
@@ -91,14 +91,7 @@ function dibujarTabla() {
                 position: 'center',
             }).showToast();
         } else {
-            Swal.fire({
-                title: 'Compra Realizada con éxito!',
-                text: 'Lo estaremos contactando via mail en las proximas horas para coordinar entrega',
-                icon: 'success',
-                confirmButtonText: 'Aceptar'
-            })
-            carrito.length = 0;
-            localStorage.clear;
+            window.location.href = "./pages/form.html"
         }
     });
 

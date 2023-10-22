@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="cine, terror, sustos, fabrica de sustos, youtube, canal de youtube">
+    <meta name="descripcion" content="Bienvenidos a La Fábrica de Sustos, nuestro pequeño espacio de terror👻">
+    <meta name="author" content="Verónica Faeinschtein">
+    <meta name="country" content="argentina">
+    <meta name="distribution" content="global">
+    <meta name="doc-type" content="web page">
+    <title>La Fabrica de Sustos │ Shop</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- toastify -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.31/sweetalert2.css">
+    <link rel="stylesheet" href="../estilos.css" />
+</head>
+
+<body>
+    <header id="barra">
+        <nav class="barra navbar navbar-expand-lg navbar-dark">
+            <a class="logo navbar-brand text-light" href="../index.html">FdS</a>
+            <button class="navbar-toggler menu menuHamburguesa" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navegacion collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="items navbar-nav mr-auto">
+                    <li class="nav-item btn">
+                        <a class="textoMenu text-decoration-none" href="../index.html">« Volver al shop</a>
+                    </li>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <main class="fondo">
+            <form class="bg-secondary text-white p-4 mr-5 ml-5">
+                <h2 class="titulosSecciones d-flex mt-5" id="form">Completá tu compra!</h2>
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <label for=""> Nombre</label>
+                            <input type="text" class="form-control cajaTexto" placeholder="Nombre" id="cajaNombre">
+                        </div>
+                        <div class="col">
+                            <label for="">Apellido</label>
+                            <input type="text" class="form-control cajaTexto" placeholder="Apellido" id="cajaApellido">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Correo Electrónico</label>
+                        <input type="email" class="form-control cajaTexto" id="cajaMail"
+                            placeholder="name@example.com">
+                    </div>
+                </form>
+
+                <h5 class="titulosSecciones d-flex mt-4"> Cómo querés recibir tu compra?</h5>
+                <table class="tablaForm ml-5 mr-5">
+                    <tr>
+                        <td>
+                            <form class="bg-dark text-white p-4 m-5">
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios"
+                                            id="envioDomicilio" value="option1" checked>
+                                        <label class="form-check-label" for="gridRadios1">
+                                            Envío a domicilio
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios"
+                                            id="retiroSucursal" value="option2">
+                                        <label class="form-check-label" for="gridRadios1">
+                                            Retirar en sucursal
+                                        </label>
+                                    </div>
+                            </form>
+                        </td>
+                        <td>
+                            <!-- formulario para cargar domicilio -->
+                            <form class="bg-secondary text-white p-4 mr-5 ml-5" id="cargaDomicilio">
+                                <h5 class="d-flex text-light">Donde queres recibir tu pedido?</h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for=""> Calle</label>
+                                        <input type="text" class="form-control cajaTexto" placeholder="Calle" id="cajaCalle">
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Altura</label>
+                                        <input type="text" class="form-control cajaTexto" placeholder="Numero" id="cajaAltura">
+                                    </div>
+                                    <div class="col">
+                                        <label for="">CP</label>
+                                        <input type="text" class="form-control cajaTexto" placeholder="XXXX" id="cajaCp">
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- div con info para retiro en sucursal -->
+                            <div style="display:none;" id="leyendaRetiro" class="bg-secondary text-white p-4 mr-5 ml-5">
+                                <h5>
+                                    Podes retirar tu producto en nuestro showroom de capital federal, nos encontramos
+                                    ubicados en Av Corrientes 4865
+                                </h5>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <h5 class="titulosSecciones d-flex mt-4" id="formPago">Como deseas pagar tu compra?</h5>
+                <table class="ml-5 mr-5">
+                    <td>
+                        <form action="" class="bg-dark text-white p-3 mr-5 ml-5">
+                            <fieldset class="form-group row">
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios"
+                                            id="optionEfectivo" value="option1" checked>
+                                        <label class="form-check-label" for="gridRadios1">
+                                            Efectivo
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="optionTj"
+                                            value="option2">
+                                        <label class="form-check-label" for="gridRadios2">
+                                            Tarjeta de Crédito / Débito
+                                        </label>
+                                    </div>
+                                    <div class="form-check disabled">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                                            value="option3" disabled>
+                                        <label class="form-check-label" for="gridRadios3">
+                                            Mercado Pago (Próximamente)
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </td>
+                    <td>
+                        <!-- div si paga en efectivo  -->
+                        <div class="form-group row bg-secondary text-white p-4 mr-5 ml-5" id="textoEfectivo">
+                            <h5>Excelente! podras abonar al retirar en sucursal o a contraentrega al recibir,
+                                dependiendo
+                                del modo que elijas en el proximo paso</h5>
+                        </div>
+                        <!-- div para cargar tarjeta  -->
+                        <form id="cargaTarjeta" class="bg-secondary text-white p-4 mr-5 ml-5">
+                            <label for="nombre-titular">Nombre del Titular:</label>
+                            <input type="text" id="nombre-titular" name="nombre-titular" class="cajaTexto">
+                            <br>
+                            <label for="numero-tarjeta">Número de Tarjeta:</label>
+                            <input type="text" id="numero-tarjeta" name="numero-tarjeta" class="cajaTexto" required>
+                            <br>
+                            <label for="fecha-expiracion">Fecha de Expiración:</label>
+                            <input type="text" id="fecha-expiracion" name="fecha-expiracion" placeholder="MM/YY"
+                                class="cajaTexto" required>
+                            <br>
+                            <label for="codigo-seguridad">Código de Seguridad (CVV):</label>
+                            <input type="text" id="codigo-seguridad" name="codigo-seguridad" class="cajaTexto" required>
+                            <br>
+                            <label for="tipo-tarjeta">Tipo de Tarjeta:</label>
+                            <select id="tipo-tarjeta" name="tipo-tarjeta">
+                                <option value="visa">Visa</option>
+                                <option value="mastercard">MasterCard</option>
+                                <option value="amex">American Express</option>
+                                <option value="other"> Otra</option>
+                            </select>
+                            <br>
+                        </form>
+                    </td>
+                </table>
+                <div class=" p-4 mr-5 ml-5 d-flex justify-content-center" id="cajaBotones">
+                    <button type="button" class="btn btn-light mr-3" id="btnVaciar">Vaciar Campos</button>
+                    <button type="button" class="btn btn-success" id="btnPagar">Confirmar Compra</button>
+                </div>
+            </form>
+            <footer>
+                <div class="redes" data-aos="zoom-in">
+                    <a href="https://www.instagram.com/lafabricadesustos/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCGn9CQUmYFKawStxPUEflWw" target="_blank">
+                        <i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <h2 class="rights">All Rights Reserved ®</h2>
+            </footer>
+        </main>
+
+        <!-- JS AGREGADOS EXTERNOS -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+            crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src=https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.31/sweetalert2.min.js></script>
+        <!-- JS PROPIOS-->
+        <script src="../Js/forms.js"></script>;
+    </body>
+
+</html>
