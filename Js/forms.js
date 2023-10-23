@@ -23,7 +23,8 @@ const codigoTj = document.getElementById ("codigo-seguridad");
 
 const cajasTexto = document.querySelectorAll (".cajaTexto");
 const vaciar = document.getElementById ("btnVaciar");
-const pagar = document.getElementById ("btnPagar;");
+const pagar = document.getElementById ("btnPagar");
+
 
 // Mostrar información de retiro en sucursal y ocultar formulario de envío al inicio
 textoRetiro.style.display = 'none';
@@ -62,8 +63,15 @@ tarjeta.addEventListener('change', () => {
 });
 
 function validarTexto (info) {
+    // tmb habria que validar que ahi no ingrese numeros
     if (info.value.trim() === '') {
         info.classList.add('border-danger');
+        Toastify({
+            text: 'Por favor ingrese datos válidos',
+            duration: 3000,
+            gravity: 'top',
+            position: 'center',
+        }).showToast();;
         return false;
     } else {
         info.classList.remove('border-danger'); 
@@ -86,14 +94,32 @@ function validarCorreo() {
             gravity: 'top',
             position: 'center',
         }).showToast();;
+        return false;
     }
 }
 
 cajaMail.addEventListener ('change', validarCorreo);
 
-cajaCp.addEventListener ('change', () =>{
+function validarAltura() {
+    const altura = cajaAltura.value;
+    if (altura.trim() !== '' && !isNaN(altura) && altura.length < 6) {
+        return true;
+    } else {
+        Toastify({
+            text: 'Por favor ingrese una altura del domicilio válida',
+            duration: 3000,
+            gravity: 'top',
+            position: 'center',
+        }).showToast();
+        return false;
+    }
+}
+
+cajaAltura.addEventListener('blur', validarAltura);
+
+function validarCp (){
     const cp = cajaCp.value;
-    if (!isNaN(cp) && cp.length === 4) {
+    if (cp.trim() !== '' && !isNaN(cp) && cp.length === 4) {
         return true;
     }else{
         Toastify({
@@ -104,11 +130,13 @@ cajaCp.addEventListener ('change', () =>{
         }).showToast();;
         return false;
         }
-    })
+}
 
-numeroTj.addEventListener('change', () => {
+cajaCp.addEventListener ('blur', validarCp);
+
+function validarNroTj (){
     const valor = numeroTj.value;
-    if (!isNaN(valor) && valor.length === 16) {
+    if (valor.trim() !== '' && !isNaN(valor) && valor.length === 16) {
         return true;
     } else {
         Toastify({
@@ -119,11 +147,13 @@ numeroTj.addEventListener('change', () => {
             }).showToast();
         return false;
         }
-});
+}
 
-fechaVto.addEventListener ('change', ()=> {
+numeroTj.addEventListener('blur', validarNroTj);
+
+function validarVto (){
     const vto = fechaVto.value;
-    if (vto.length === 5) {
+    if (vto.trim() !== '' && vto.length === 5) {
         return true;
     } else {
         Toastify({
@@ -134,11 +164,13 @@ fechaVto.addEventListener ('change', ()=> {
         }).showToast();
         return false;
     }
-})
+}
 
-codigoTj.addEventListener ('change', () =>{
+fechaVto.addEventListener ('blur', validarVto);
+
+function validarCodigo (){
     const codigo = codigoTj.value;
-    if (!isNaN(codigo) && codigo.length === 3){
+    if (codigo.trim() !== '' && !isNaN(codigo) && codigo.length === 3){
         return true;
     } else{
         Toastify({
@@ -149,7 +181,9 @@ codigoTj.addEventListener ('change', () =>{
         }) .showToast();
         return false;
     }
-})
+}
+
+codigoTj.addEventListener ('blur', validarCodigo)
 
 vaciar.addEventListener ('click', () =>{
     Swal.fire({
@@ -173,24 +207,94 @@ vaciar.addEventListener ('click', () =>{
             nombreTt.value = "";
             fechaVto.value = "";
             codigoTj.value= "";
-            // ver si puedo hacer que se recargue la pagina despues de esto
+
+            retiro.checked = false;
+            envio.checked = true;
+            textoRetiro.style.display = 'block';
+            formEnvio.style.display = 'none';
+
+            efectivo.checked = true;
+            tarjeta.checked = false;
+            textoEfectivo.style.display = 'block';
+            datosTj.style.display = 'none';
+
+            location.reload();
         }
     })
 })
 // Validacion campos general
+function validarDomicilio() {
+    if (envio.checked) {
+        let calleValida = validarTexto(cajaCalle);
+        let alturaValida = validarAltura(cajaAltura);
+        let cpValido = validarCp(cajaCp);
+        return calleValida && alturaValida && cpValido;
+    } else if (retiro.checked) {
+        return true;
+    }
+}
+function validarTarjeta (){
+    if (tarjeta.checked){
+        let numeroTarjetaValido = validarNroTj(numeroTj);
+        let fechaVtoValida = validarVto(fechaVto);
+        let codigoSeguridadValido = validarCodigo(codigoTj);
+        return numeroTarjetaValido && fechaVtoValida && codigoSeguridadValido;
+    } else if (efectivo.checked){
+        return true
+}
+}
+
+function validarCampos() {
+    let nombreValido = validarTexto(cajaNombre);
+    let apellidoValido = validarTexto(cajaApellido);
+    let mailValido = validarCorreo();
+    let domicilioValido = validarDomicilio();
+    let tarjetaValida = validarTarjeta();
+
+    return nombreValido && apellidoValido && mailValido && domicilioValido && tarjetaValida;
+}
+
+function pagarOk() {
+    if (carrito.length === 0) {
+        Swal.fire({
+            title: 'El carrito está vacío',
+            text: 'Agrega productos a tu carrito antes de realizar una compra.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar'
+        }) .then ((result) =>{
+            if (result.isConfirmed){
+                window.location.href = '../index.html';
+            }
+        })
+    } else if (validarCampos()) {
+        Swal.fire({
+            title: 'Compra Realizada con éxito!',
+            text: 'Lo estaremos contactando vía email en los próximos minutos',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '../index.html';
+            }
+        });
+        carrito.length = 0;
+        localStorage.clear();
+        dibujarTabla();
+    } 
+}
+
+
+pagar.addEventListener('click', function(event) {
+    event.preventDefault();
+    pagarOk();
+});
+
 
 // ME FALTA LA FUNCION DEL SUBMIT ACA Y LA VALORACION DE TODO, CON LO DEL and and anda TODO TRUE
 
 
 // dejo este alert para el cierre del form depues de "pagar"
-// Swal.fire({
-//     title: 'Compra Realizada con éxito!',
-//     text: 'Lo estaremos contactando via mail en las proximas horas para coordinar entrega',
-//     icon: 'success',
-//     confirmButtonText: 'Aceptar'
-// })
-// carrito.length = 0;
-// localStorage.clear;
+
 
 
 

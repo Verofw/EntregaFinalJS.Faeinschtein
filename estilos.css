@@ -27,6 +27,13 @@ html {
   width: 100%;
 }
 
+.barraForm{
+  background-image: url(../img/Mesa\ de\ trabajo\ 2.jpg);
+  background-size: cover;
+  background-position-y: 20%;
+  padding: 0px;
+}
+
 .menuHamburguesa {
   margin: 30px;
 }
