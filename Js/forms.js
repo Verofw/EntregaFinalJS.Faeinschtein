@@ -187,7 +187,20 @@ function validarCodigo (){
     }
 }
 
-codigoTj.addEventListener ('blur', validarCodigo)
+codigoTj.addEventListener ('blur', validarCodigo);
+
+
+let tipoTarjeta = document.getElementById("tipo-tarjeta");
+let otraTarjetaInput = document.getElementById("otra-tarjeta");
+
+tipoTarjeta.addEventListener("change", function () {
+    if (tipoTarjeta.value === "other") {
+        otraTarjetaInput.style.display = "block"; 
+    } else {
+        otraTarjetaInput.style.display = "none";
+    }
+});
+
 
 vaciar.addEventListener ('click', () =>{
     Swal.fire({
