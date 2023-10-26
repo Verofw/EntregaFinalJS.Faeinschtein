@@ -1,0 +1,122 @@
+[
+    {
+        "nombre": "Remera Art",
+        "precio": 6000,
+        "imagen": "./img/Remera1.png",
+        "detalle": "100% algodon peinado"
+    },
+    {
+        "nombre": "Remera Carrie",
+        "precio": 6000,
+        "imagen": "./img/Remera2.png",
+        "detalle": "100% algodon peinado"
+    },
+    {
+        "nombre": "Remera Chucky",
+        "precio": 6000,
+        "imagen": "./img/Remera3.png",
+        "detalle": "100% algodon peinado"
+    },
+    {
+        "nombre": "Remera It",
+        "precio": 6000,
+        "imagen": "./img/Remera4.png",
+        "detalle": "100% algodon peinado"
+    },
+    {
+        "nombre": "Buzo Art",
+        "precio": 12000,
+        "imagen": "./img/Buzo1.png",
+        "detalle": "100% algodon peinado"
+    },
+    {
+        "nombre": "Buzo Carrie",
+        "precio": 12000,
+        "imagen": "./img/Buzo2.png",
+        "detalle": "100% algodon peinado"
+    },
+    {
+        "nombre": "Buzo Chucky",
+        "precio": 12000,
+        "imagen": "./img/Buzo3.png",
+        "detalle": "100% algodon peinado"
+    },
+    {
+        "nombre": "Buzo Asesinos",
+        "precio": 12000,
+        "imagen": "./img/Buzo4.png",
+        "detalle": "100% algodon peinado"
+    },
+    {
+        "nombre": "Taza Art",
+        "precio": 2500,
+        "imagen": "./img/taza1.png",
+        "detalle": "Aptas para microondas!"
+    },
+    {
+        "nombre": "Taza Freddy",
+        "precio": 2500,
+        "imagen": "./img/taza2.png",
+        "detalle": "Aptas para microondas!"
+    },
+    {
+        "nombre": "Taza It",
+        "precio": 2500,
+        "imagen": "./img/taza3.png",
+        "detalle": "Aptas para microondas!"
+    },
+    {
+        "nombre": "Taza Asesinos",
+        "precio": 2500,
+        "imagen": "./img/taza4.png",
+        "detalle": "Aptas para microondas!"
+    },
+    {
+        "nombre": "Poster Chucky",
+        "precio": 3500,
+        "imagen": "./img/poster1.png",
+        "detalle": "Impreso en papel fotográfico"
+    },
+    {
+        "nombre": "Poster Freddy",
+        "precio": 3500,
+        "imagen": "./img/poster2.png",
+        "detalle": "Impreso en papel fotográfico"
+    },
+    {
+        "nombre": "Poster Art",
+        "precio": 3500,
+        "imagen": "./img/poster3.png",
+        "detalle": "Impreso en papel fotográfico"
+    },
+    {
+        "nombre": "Poster Carrie",
+        "precio": 3500,
+        "imagen": "./img/poster4.png",
+        "detalle": "Impreso en papel fotográfico"
+    },
+    {
+        "nombre": "Sticker Art",
+        "precio": 1500,
+        "imagen": "./img/Sticker1.png",
+        "detalle": "Resistentes al calor!"
+    },
+    {
+        "nombre": "Sticker Freddy",
+        "precio": 1500,
+        "imagen": "./img/Sticker2.png",
+        "detalle": "Resistentes al calor!"
+    },
+    {
+        "nombre": "Sticker Chucky",
+        "precio": 1500,
+        "imagen": "./img/Sticker3.png",
+        "detalle": "Resistentes al calor!"
+    },{
+        "nombre": "Sticker Carrie",
+        "precio": 1500,
+        "imagen": "./img/Sticker4.png",
+        "detalle": "Resistentes al calor!"
+    }
+]
+

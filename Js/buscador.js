@@ -1,14 +1,17 @@
 const busquedaInput = document.getElementById("busquedaInput");
 const buscarButton = document.getElementById("buscarBoton");
+const resultadosContainer = document.getElementById("resultadosContainer");
 
 busquedaInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         realizarBusqueda();
+        resultadosContainer.scrollIntoView({ behavior: "smooth" });
     }
 });
 
 buscarButton.addEventListener("click", function () {
     realizarBusqueda();
+    resultadosContainer.scrollIntoView({ behavior: "smooth" }); 
 });
 
 function realizarBusqueda() {
@@ -53,6 +56,7 @@ function mostrarResultados(resultados) {
 
             // Agrego el evento click al botón Agregar al carrito despues de filtrar, porque no me toma la class carritoPush
             const agregarAlCarritoButton = card.querySelector('.carritoPush');
+            
             agregarAlCarritoButton.addEventListener('click', () => {
                 const productoSeleccionado = producto;
                 const indiceCarrito = carrito.findIndex((item) => item.producto.nombre === productoSeleccionado.nombre);
@@ -75,7 +79,7 @@ function mostrarResultados(resultados) {
                 localStorage.setItem('carrito', JSON.stringify(carrito));
                 dibujarTabla();
             });
-            resultadosContainer.appendChild(card);
+            // resultadosContainer.appendChild(card); esta duplicado, por eso lo comento, por si no llega a funcionar algo lo dejo 
         });
     }
 }

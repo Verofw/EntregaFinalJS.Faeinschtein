@@ -62,9 +62,10 @@ tarjeta.addEventListener('change', () => {
     }
 });
 
+var letrasRegex = /^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ]+$/;
+
 function validarTexto (info) {
-    // tmb habria que validar que ahi no ingrese numeros
-    if (info.value.trim() === '') {
+    if (!letrasRegex.test(info.value.trim())) {
         info.classList.add('border-danger');
         Toastify({
             text: 'Por favor ingrese datos válidos',
@@ -151,13 +152,15 @@ function validarNroTj (){
 
 numeroTj.addEventListener('blur', validarNroTj);
 
-function validarVto (){
+function validarVto() {
     const vto = fechaVto.value;
-    if (vto.trim() !== '' && vto.length === 5) {
+    const formatoValido = /^\d{2}\/\d{2}$/;
+
+    if (formatoValido.test(vto)) {
         return true;
     } else {
         Toastify({
-            text: 'Ingrese una fecha de vencimiento váilida xx/xx',
+            text: 'Ingrese una fecha de vencimiento válida xx/xx',
             duration: 3000,
             gravity: 'top',
             position: 'center',
@@ -165,6 +168,7 @@ function validarVto (){
         return false;
     }
 }
+
 
 fechaVto.addEventListener ('blur', validarVto);
 
@@ -290,13 +294,7 @@ pagar.addEventListener('click', function(event) {
 });
 
 
-// ME FALTA LA FUNCION DEL SUBMIT ACA Y LA VALORACION DE TODO, CON LO DEL and and anda TODO TRUE
-
-
-// dejo este alert para el cierre del form depues de "pagar"
-
 
 
 
 // despues me falta cargar aca la api con el pais/provincia/localidades
-// y me falta cambiar los productos a un json y no en un productos para que los levante de ahi con fetch, async await y todo lo de la penultima/ultima clase
