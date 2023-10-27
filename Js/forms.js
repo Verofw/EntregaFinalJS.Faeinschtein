@@ -26,6 +26,7 @@ const vaciar = document.getElementById ("btnVaciar");
 const pagar = document.getElementById ("btnPagar");
 
 
+
 // Mostrar información de retiro en sucursal y ocultar formulario de envío al inicio
 textoRetiro.style.display = 'none';
 formEnvio.style.display = 'block';

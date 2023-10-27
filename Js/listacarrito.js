@@ -13,9 +13,9 @@ function dibujarTabla() {
                 <td>${item.cantidad}</td>
                 <td>$${subtotal}</td>
                 <td>
-                    <button id="sumarItem-${index}" class= "btn btn-info mr-1"> + </>
-                    <button id="quitarItem-${index}" class= "btn btn-info mr-1"> - </>
-                    <button id= "eliminarFila-${index}" class= "btn btn-info"> <i class="fa-solid fa-trash"></i></>
+                    <button id="sumarItem-${index}" class= "btn btn-info mr-1 btnLista"> + </>
+                    <button id="quitarItem-${index}" class= "btn btn-info mr-1 btnLista"> - </>
+                    <button id= "eliminarFila-${index}" class= "btn btn-info btnLista"> <i class="fa-solid fa-trash"></i></>
                 </td>
         `;
         bodyTabla.appendChild(tr);
@@ -61,8 +61,13 @@ function dibujarTabla() {
         </tr>
         <tr>
             <td>
-                <button type="button" class="btn btn-danger" id="vaciarCarrito">Vaciar Carrito</button>
-                <button type="button" class="btn btn-primary" id="checkout">CheckOut</button>
+                <button type="button" class="btn btn-danger btnLista" id="vaciarCarrito">Vaciar Carrito</button>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <button type="button" class="btn btn-primary btnLista" id="checkout">CheckOut</button>
             </td>
         </tr>
     `;
@@ -128,3 +133,4 @@ function dibujarTabla() {
         }
     })
 }
+

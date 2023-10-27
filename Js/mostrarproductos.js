@@ -31,7 +31,7 @@ async function mostrarProductos(condicion, contenedor) {
             tarjeta.innerHTML = `
                 <img src="${producto.imagen}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title tituloProductos">${producto.nombre} // $${producto.precio}</h5>
+                    <h5 class="card-title tituloProductos">${producto.nombre} | $${producto.precio}</h5>
                     <p class="card-text">${producto.detalle}</p>
                     <div class="botones d-flex"> 
                         <button class="btn btn-light agregarCarrito">Agregar al carrito</button>

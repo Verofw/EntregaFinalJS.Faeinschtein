@@ -2,6 +2,7 @@ const busquedaInput = document.getElementById("busquedaInput");
 const buscarButton = document.getElementById("buscarBoton");
 const resultadosContainer = document.getElementById("resultadosContainer");
 
+
 busquedaInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         realizarBusqueda();

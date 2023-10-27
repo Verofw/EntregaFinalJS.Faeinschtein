@@ -48,14 +48,14 @@
                         <a class="textoMenu text-decoration-none" href="#posters">Gráficas</a>
                     </li>
                 </ul>
-                <input type="text" id="busquedaInput" placeholder="Buscar productos...">
+                <input type="text" id="busquedaInput" class="cajaBusqueda" placeholder="Buscar productos...">
                 <button id="buscarBoton" class="btn btn-light ml-2"><i
                         class="fa-solid fa-magnifying-glass"></i></button>
 
                 <div id="carritoIcon">
                     <div class="btn btn-light mr-2 ml-2"><i class="fa-solid fa-cart-shopping "></i></div>
                     <div class="container-fluid d-flex justify-content-center" id="contenedorTabla">
-                        <table class="table col-6" id="carritoLista">
+                        <table class="table col-12" id="carritoLista">
                             <thead>
                                 <tr>
                                     <th scope="col">Producto</th>
@@ -76,8 +76,7 @@
         <div class="jumbotron fondo">
             <p class="display-3 laFabrica">La fábrica de</p>
             <p class="display-1 sustos pulse">SUSTOS</p>
-
-            <img src="./img/SHOP.png" class="img-fluid grow" alt="..." data-aos="fade-up" />
+            <div class="d-flex justify-content-center"> <img src="./img/SHOP.png" class="img-fluid grow" alt="..." data-aos="fade-up" /></div>
         </div>
         </div>
         <br>
@@ -123,10 +122,11 @@
                     <i class="fa-brands fa-youtube"></i></a>
             </div>
             <h2 class="rights">All Rights Reserved ®</h2>
-            <div class="mr-5 ml-5">
-                <h3 class="rights">Encontranos en nuestro ShowRoom de Av Corrientes 4865 de Lunes a Viernes de 9 a 18hrs.
-                    Sabados, Domingos y feriados cerrado.
+            <div class="mr-5 ml-5 cajaInfoLocal">
+                <h3 class="info">Encontranos en nuestro ShowRoom de Av Corrientes 4865 de Lunes a Viernes de 9 a 18hrs.
+                    Sábados, Domingos y feriados cerrado.
                 </h3>
+                
             </div>
             
 
@@ -148,8 +148,7 @@
     </script>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.31/sweetalert2.min.js></script>
     <!-- JS PROPIO -->
-    <!-- <script src="./Js/constructor.js"></script>; -->
-    <!-- <script src="./Js/productos.js"></script>; -->
+
     <script src="./Js/item.js"></script>
     <script src="./Js/mostrarproductos.js"></script>
     <script src="./Js/buscador.js"></script>
