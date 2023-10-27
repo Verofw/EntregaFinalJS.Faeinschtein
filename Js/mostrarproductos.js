@@ -5,6 +5,16 @@ const containerPosters = document.querySelector('.containerPosters');
 const containerStickers = document.querySelector('.containerStickers');
 let productos; 
 
+const busquedaInput = document.getElementById('busquedaInput');
+const buscarBoton = document.getElementById('buscarBoton');
+
+buscarBoton.addEventListener('click', function() {
+    if (window.innerWidth <= 768) {
+        // Si el ancho de la ventana es menor o igual a 768px, muestra/oculta el campo de búsqueda
+        busquedaInput.style.display = (busquedaInput.style.display === 'none' || busquedaInput.style.display === '') ? 'block' : 'none';
+    }
+});
+
 
 async function obtenerProductos() {
     const response = await fetch('../productos.json');

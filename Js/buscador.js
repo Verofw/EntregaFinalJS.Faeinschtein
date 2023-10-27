@@ -1,4 +1,4 @@
-const busquedaInput = document.getElementById("busquedaInput");
+
 const buscarButton = document.getElementById("buscarBoton");
 const resultadosContainer = document.getElementById("resultadosContainer");
 

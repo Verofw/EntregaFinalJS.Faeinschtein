@@ -1,3 +1,6 @@
+let carrito = JSON.parse (localStorage.getItem ("carrito"));
+dibujarTabla();
+
 const cajaNombre = document.getElementById ("cajaNombre");
 const cajaApellido = document.getElementById ("cajaApellido");
 const cajaMail = document.getElementById ("cajaMail");
