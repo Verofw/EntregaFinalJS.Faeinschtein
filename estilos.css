@@ -27,7 +27,7 @@ html {
   width: 100%;
 }
 
-.barraForm{
+.barraForm {
   background-image: url(../img/Mesa\ de\ trabajo\ 2.jpg);
   background-size: cover;
   background-position-y: 20%;
@@ -113,6 +113,8 @@ html {
   border: 1px solid #ccc;
   padding: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  max-height: 400px;
+  overflow: auto;
 }
 
 .fondo {
@@ -262,38 +264,46 @@ footer {
 }
 
 
-@media only screen and (max-width: 1310px){
+/* FORM  */
+
+.tablaFactura{
+  max-height: 400px;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 1310px) {
   .laFabrica {
     margin-top: 10rem;
   }
 
-  .navegacion{
+  .navegacion {
     display: flex;
   }
-  .items{
+
+  .items {
     display: flex;
 
   }
 }
 
-@media only screen and (max-width: 992px){
-  .container{
+@media only screen and (max-width: 992px) {
+  .container {
     width: 100%;
     flex-wrap: wrap;
   }
 
-  .info{
+  .info {
     font-size: 0.9rem;
   }
 
-  .titulosSecciones{
+  .titulosSecciones {
     font-size: 3.5rem;
   }
 
 }
 
-@media only screen and (max-width: 650px) {
-  .titulosSecciones{
+@media only screen and (max-width: 678px) {
+  .titulosSecciones {
     font-size: 3rem;
   }
 }
@@ -309,24 +319,32 @@ footer {
     font-size: 1rem;
   }
 
-  .btnLista{
+  .btnAgregarQuitar {
     width: 100%;
+    margin-bottom: 10px;
   }
 
-  .btnLista a {
+  .btnAgregarQuitar a {
     font-size: 0.5rem;
+  }
+
+  .titulosSecciones {
+    font-size: 2.5rem;
   }
 
 }
 
-@media only screen and (max-width: 460px) {
+
+@media only screen and (max-width: 470px) {
   .logo {
     font-size: 4rem;
-    padding: 25px;
+    padding: 0 35px;
   }
-  .textoMenu{
+
+  .textoMenu {
     font-size: 1.2rem;
   }
+
   .cajaBusqueda {
     width: 70%;
   }
@@ -351,8 +369,8 @@ footer {
     font-size: 7rem;
   }
 
-  .titulosSecciones{
-    font-size: 4rem;
+  .titulosSecciones {
+    font-size: 2rem;
   }
 
   .redes a {
@@ -363,7 +381,7 @@ footer {
     font-size: 0.8rem;
   }
 
-  .info{
+  .info {
     font-size: 0.7rem;
   }
 
@@ -376,6 +394,27 @@ footer {
 
   .subir a {
     font-size: 1.5rem;
+  }
+
+  #bodyTablaFactura{
+    font-size: 0.9rem;
+  }
+
+  .btnAgregarQuitar{
+    width: 80%;
+  }
+
+  .btnVaciar{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 445px){
+  .btnAgregarQuitar{
+    padding: 0;
+  }
+  .tHeadFactura{
+    font-size: 0.8rem;
   }
 }
 
@@ -407,11 +446,11 @@ footer {
     height: 8rem;
   }
 
-  .cajaInfoLocal{
+  .cajaInfoLocal {
     margin: 0;
   }
 
-  .info{
+  .info {
     font-size: 0.5rem;
   }
 

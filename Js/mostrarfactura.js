@@ -7,14 +7,14 @@ function dibujarTabla() {
         totalCarrito += subtotal;
         const tr = document.createElement('tr');
         tr.innerHTML += `
-                <td>${item.producto.nombre}</td>
-                <td>$${item.producto.precio}</td>
-                <td>${item.cantidad}</td>
-                <td>$${subtotal}</td>
-                <td>
-                    <button id="sumarItem-${index}" class= "btn btn-info mr-1"> + </>
-                    <button id="quitarItem-${index}" class= "btn btn-info mr-1"> - </>
-                    <button id= "eliminarFila-${index}" class= "btn btn-info"> <i class="fa-solid fa-trash"></i></>
+                <td class="d-md-table-cell">${item.producto.nombre}</td>
+                <td class="d-md-table-cell">$${item.producto.precio}</td>
+                <td class="d-md-table-cell">${item.cantidad}</td>
+                <td class="d-md-table-cell">$${subtotal}</td>
+                <td> 
+                    <button id="sumarItem-${index}" class= "btn btn-info mr-1 btnAgregarQuitar"> + </>
+                    <button id="quitarItem-${index}" class= "btn btn-info mr-1 btnAgregarQuitar"> - </>
+                    <button id= "eliminarFila-${index}" class= "btn btn-info btnAgregarQuitar"> <i class="fa-solid fa-trash"></i></>
                 </td>
         `;
         bodyTablaFactura.appendChild(tr);
@@ -62,7 +62,7 @@ function dibujarTabla() {
             Total $${totalCarrito} 
         </td>
         <td colspan="3">
-            <button type="button" class="btn btn-danger" id="vaciarCarrito">Vaciar Carrito</button>
+            <button type="button" class="btn btn-danger btnVaciar" id="vaciarCarrito">Vaciar Carrito</button>
         </td>
 `;
     bodyTablaFactura.appendChild(tfoot);
