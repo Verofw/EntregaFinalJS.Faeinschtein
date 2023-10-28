@@ -418,13 +418,19 @@ footer {
   }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 370px) {
   .logo {
     font-size: 3rem;
   }
 
   .fondo {
     padding: 10px 0;
+  }
+
+  .btnLista{
+    width: 50%;
+    font-size: 0.8rem;
+    padding: 0;
   }
 
   .laFabrica {
@@ -459,6 +465,30 @@ footer {
   }
 
   .rights {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    margin: 0 10px;;
   }
-}
+
+  /* FORM  */
+
+  .tHeadFactura{
+    font-size: 0.6Rem;
+  }
+  .btnAgregarQuitar{
+    width: 60%;
+  }
+  #bodyTablaFactura{
+    font-size: 0.7rem;
+  }
+  .titulosSecciones{
+    font-size: 1.5rem;
+    margin-bottom: 20px;;
+  }
+  .textoOption{
+    font-size: 1rem;
+    };
+
+  .btnVaciar{
+      width: 10%;
+    }
+  }

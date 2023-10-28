@@ -111,7 +111,7 @@
                         <div class="col-md-6">
                             <!-- formulario para cargar domicilio -->
                             <form class="bg-secondary text-white p-4 m-2" id="cargaDomicilio">
-                                <h5 class="d-flex text-light">Dónde querés recibir tu pedido?</h5>
+                                <h5 class="d-flex text-light textoDireccion">Dónde querés recibir tu pedido?</h5>
                                 <div class="row">
                                     <div class="col">
                                         <label for=""> Calle*</label>
@@ -130,7 +130,7 @@
                             </form>
                             <!-- div con info para retiro en sucursal -->
                             <div style="display: none;" id="leyendaRetiro" class="bg-secondary text-white p-4 m-2">
-                                <h5>
+                                <h5 class="textoOption">
                                     Podés retirar tu producto en nuestro showroom de Capital Federal, nos encontramos
                                     ubicados en Av Corrientes 4865, de 10 a 17hrs.
                                 </h5>
@@ -173,34 +173,42 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group row bg-secondary text-white p-4 mr-5 ml-5" id="textoEfectivo">
-                                <h5>Excelente! podrás abonar al retirar en sucursal o a contraentrega al recibir,
+                                <h5 class="textoOption">Excelente! podrás abonar al retirar en sucursal o a contraentrega al recibir,
                                     dependiendo
                                     del modo que hayas elegido en el paso anterior</h5>
                             </div>
                             <!-- div para cargar tarjeta  -->
                             <form id="cargaTarjeta" class="bg-secondary text-white p-4 mr-5 ml-5">
-                                <label for="nombre-titular">Nombre del Titular*</label>
-                                <input type="text" id="nombre-titular" name="nombre-titular" class="cajaTexto" required>
+                                <div class="row"> <label for="nombre-titular">Nombre del Titular*</label>
+                                    <input type="text" id="nombre-titular" name="nombre-titular" class="cajaTexto" required> </div>
                                 <br>
-                                <label for="numero-tarjeta">Número de Tarjeta*</label>
-                                <input type="text" id="numero-tarjeta" name="numero-tarjeta" required>
+                                <div class="row">
+                                    <label for="numero-tarjeta">Número de Tarjeta*</label>
+                                    <input type="text" id="numero-tarjeta" name="numero-tarjeta" required>
+                                </div>
                                 <br>
-                                <label for="fecha-expiracion">Fecha de Vto*</label>
-                                <input type="text" id="fecha-expiracion" name="fecha-expiracion" placeholder="MM/YY"
-                                    required>
+                                <div class="row">
+                                    <label for="fecha-expiracion">Fecha de Vto*</label>
+                                    <input type="text" id="fecha-expiracion" name="fecha-expiracion" placeholder="MM/YY"
+                                        required>
+                                </div>
                                 <br>
-                                <label for="codigo-seguridad">Código de Seguridad (CVV)*</label>
-                                <input type="text" id="codigo-seguridad" name="codigo-seguridad" required>
+                                <div class="row">
+                                    <label for="codigo-seguridad">Código de Seguridad (CVV)*</label>
+                                    <input type="text" id="codigo-seguridad" name="codigo-seguridad" required>
+                                </div>
                                 <br>
-                                <label for="tipo-tarjeta">Tipo de Tarjeta:</label>
-                                <select id="tipo-tarjeta" name="tipo-tarjeta">
-                                    <option value="visa">Visa</option>
-                                    <option value="mastercard">MasterCard</option>
-                                    <option value="amex">American Express</option>
-                                    <option value="other"> Otra</option>
-                                </select>
+                                <div class="row">
+                                    <label for="tipo-tarjeta">Tipo de Tarjeta:</label>
+                                    <select id="tipo-tarjeta" name="tipo-tarjeta">
+                                        <option value="visa">Visa</option>
+                                        <option value="mastercard">MasterCard</option>
+                                        <option value="amex">American Express</option>
+                                        <option value="other"> Otra</option>
+                                    </select>
+                                </div>
                                 <br>
-                                <div id="otra-tarjeta" style="display: none;">
+                                <div id="otra-tarjeta" style="display: none;" class="row">
                                     <label for="otra-tarjeta-input">Especificar otro tipo de tarjeta:</label>
                                     <input type="text" id="otra-tarjeta-input" name="otra-tarjeta-input"
                                         class="cajaTexto">
@@ -249,8 +257,7 @@
         </script>
         <script src=https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.31/sweetalert2.min.js> </script> <!-- JS
             PROPIOS-->
-            < script src = "../Js/item.js" >
-        </script>
+        <script src = "../Js/item.js" ></script>
         <script src="../Js/mostrarfactura.js"></script>
         <script src="../Js/forms.js"></script>
 
