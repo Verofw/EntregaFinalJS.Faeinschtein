@@ -1,4 +1,3 @@
-
 const buscarButton = document.getElementById("buscarBoton");
 const resultadosContainer = document.getElementById("resultadosContainer");
 
@@ -6,13 +5,23 @@ const resultadosContainer = document.getElementById("resultadosContainer");
 busquedaInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         realizarBusqueda();
-        resultadosContainer.scrollIntoView({ behavior: "smooth" });
+        resultadosContainer.scrollIntoView({
+            behavior: "smooth"
+        });
     }
 });
 
 buscarButton.addEventListener("click", function () {
+    if (busquedaInput.style.display === "none" || busquedaInput.style.display === "") {
+        busquedaInput.style.display = "inline-block"; 
+        busquedaInput.focus();
+    } else {
+        busquedaInput.style.display = "none";
+    }
     realizarBusqueda();
-    resultadosContainer.scrollIntoView({ behavior: "smooth" }); 
+    resultadosContainer.scrollIntoView({
+        behavior: "smooth"
+    });
 });
 
 function realizarBusqueda() {
@@ -35,7 +44,7 @@ function buscarProductos(consulta) {
 
 function mostrarResultados(resultados) {
     const resultadosContainer = document.getElementById("resultadosContainer");
-    resultadosContainer.innerHTML = ""; 
+    resultadosContainer.innerHTML = "";
 
     if (resultados.length === 0) {
         const h5 = document.createElement("h5");
@@ -59,7 +68,7 @@ function mostrarResultados(resultados) {
 
             // Agrego el evento click al botón Agregar al carrito despues de filtrar, porque no me toma la class carritoPush
             const agregarAlCarritoButton = card.querySelector('.carritoPush');
-            
+
             agregarAlCarritoButton.addEventListener('click', () => {
                 const productoSeleccionado = producto;
                 const indiceCarrito = carrito.findIndex((item) => item.producto.nombre === productoSeleccionado.nombre);

@@ -48,29 +48,26 @@
                         <a class="textoMenu text-decoration-none" href="#posters">Gráficas</a>
                     </li>
                 </ul>
-                <input type="text" id="busquedaInput" class="cajaBusqueda" placeholder="Buscar productos...">
-                <button id="buscarBoton" class="btn btn-light ml-2"><i
-                        class="fa-solid fa-magnifying-glass"></i></button>
-
+                <input type="text" id="busquedaInput" class="cajaBusqueda" placeholder="Buscar productos..." style="display: none;">
+                <button id="buscarBoton" class="btn btn-light ml-2"><i class="fa-solid fa-magnifying-glass"></i></button>
                 <div id="carritoIcon">
                     <div class="btn btn-light mr-2 ml-2"><i class="fa-solid fa-cart-shopping "></i></div>
                     <div class="table-responsive tablaFactura" id="contenedorTabla">
                         <table class="table col-12" id="carritoLista">
                             <thead>
                                 <tr>
-                                    <th scope="col" class="tHeadFactura">Producto</th>
-                                    <th scope="col" class="tHeadFactura">Precio</th>
-                                    <th scope="col" class="tHeadFactura">Uds</th>
-                                    <th scope="col" class="tHeadFactura">Subtotal</th>
-                                    <th scope="col" class="tHeadFactura"> Agregar/Quitar</th>
+                                    <th class="tHeadFactura">Producto</th>
+                                    <th class="tHeadFactura">Precio</th>
+                                    <th class="tHeadFactura">Uds</th>
+                                    <th class="tHeadFactura">Subtotal</th>
+                                    <th class="tHeadFactura"> Agregar/Quitar</th>
                                 </tr>
                             </thead>
                             <tbody id="bodyTabla">
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td>
-                                    <button type="button" class="btn btn-primary btnLista" id="checkout">CheckOut</button>
+                                    <td> <button type="button" class="btn btn-primary btnLista" id="checkout">CheckOut</button>
                                     </td>
                                 </tr>
                             </tfoot>

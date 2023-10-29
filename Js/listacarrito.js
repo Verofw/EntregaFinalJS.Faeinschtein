@@ -62,9 +62,7 @@ function dibujarTabla() {
             <td class="font-weight-bold">Total $${totalCarrito}</td>
         </tr>
         <tr>
-            <td>
-                <button type="button" class="btn btn-danger btnLista" id="vaciarCarrito">Vaciar Carrito</button>
-                
+            <td> <button type="button" class="btn btn-danger btnLista" id="vaciarCarrito">Vaciar Carrito</button>
             </td>
         </tr>
         

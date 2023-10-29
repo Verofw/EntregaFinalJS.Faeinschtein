@@ -97,14 +97,6 @@ html {
   cursor: pointer;
 }
 
-#contenedorTabla{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
-}
-
 #carritoLista {
   z-index: 1000;
   display: none; /* Oculto por defecto */
@@ -112,6 +104,7 @@ html {
   top: 100%;
   color: #f5fcff;
   font-family: "Roboto", sans-serif;
+  font-size: 1rem;
   right: 0;
   background-color: rgb(95, 90, 90);
   border: 1px solid #ccc;
@@ -121,6 +114,12 @@ html {
   overflow: auto;
   max-width: 100%;
   width: 100%;
+
+}
+
+.tHeadFactura{
+  font-size: 1.3rem;
+  padding: 0 20px;
 }
 
 .fondo {
@@ -344,6 +343,10 @@ footer {
     font-size: 1rem;
   }
 
+  .tHeadFactura{
+    font-size: 1rem;
+  }
+
   .btnAgregarQuitar {
     width: 100%;
     margin-bottom: 10px;
@@ -378,6 +381,10 @@ footer {
 
   #carritoLista {
     font-size: 0.8rem;
+  }
+
+  .tHeadFactura{
+    font-size: 0.7rem;
   }
 
   .bienvenidos {
