@@ -13,7 +13,7 @@ busquedaInput.addEventListener("keydown", function (event) {
 
 buscarButton.addEventListener("click", function () {
     if (busquedaInput.style.display === "none" || busquedaInput.style.display === "") {
-        busquedaInput.style.display = "inline-block"; 
+        busquedaInput.style.display = "inline-block";
         busquedaInput.focus();
     } else {
         busquedaInput.style.display = "none";

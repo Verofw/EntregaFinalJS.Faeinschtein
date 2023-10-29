@@ -114,10 +114,9 @@ html {
   overflow: auto;
   max-width: 100%;
   width: 100%;
-
 }
 
-.tHeadFactura{
+.tHeadFactura {
   font-size: 1.3rem;
   padding: 0 20px;
 }
@@ -167,7 +166,7 @@ html {
   -moz-transform: scale3d(1.1, 1.1, 0.3);
 }
 
-#resultadosContainer{
+#resultadosContainer {
   background-color: #505050;
 }
 
@@ -179,7 +178,7 @@ html {
   justify-content: center;
 }
 
-.titulosSeccionesForm{
+.titulosSeccionesForm {
   font-family: "Big Shoulders Display", cursive;
   color: white;
   font-size: 5rem;
@@ -278,13 +277,13 @@ footer {
 }
 
 
-.tablaFactura{
+.tablaFactura {
   max-height: 400px;
   overflow: auto;
 }
 
-.cajaDatos{
-  z-index: 0 ;
+.cajaDatos {
+  z-index: 0;
 }
 
 @media only screen and (max-width: 1310px) {
@@ -327,7 +326,8 @@ footer {
   .titulosSecciones {
     font-size: 4rem;
   }
-  .titulosSeccionesForm{
+
+  .titulosSeccionesForm {
     font-size: 3rem;
   }
 }
@@ -343,7 +343,7 @@ footer {
     font-size: 1rem;
   }
 
-  .tHeadFactura{
+  .tHeadFactura {
     font-size: 1rem;
   }
 
@@ -359,7 +359,8 @@ footer {
   .titulosSecciones {
     font-size: 3.5rem;
   }
-  .titulosSeccionesForm{
+
+  .titulosSeccionesForm {
     font-size: 2.5rem;
   }
 }
@@ -383,7 +384,7 @@ footer {
     font-size: 0.8rem;
   }
 
-  .tHeadFactura{
+  .tHeadFactura {
     font-size: 0.7rem;
   }
 
@@ -406,7 +407,7 @@ footer {
   .titulosSecciones {
     font-size: 3rem;
   }
-  
+
   .titulosSeccionesForm {
     font-size: 2rem;
   }
@@ -434,28 +435,29 @@ footer {
     font-size: 1.5rem;
   }
 
-  #bodyTabla{
+  #bodyTabla {
     font-size: 0.7rem;
   }
 
-  .btnAgregarQuitar{
+  .btnAgregarQuitar {
     width: 80%;
   }
 
-  .btnVaciar{
+  .btnVaciar {
     width: 80%;
   }
 }
 
-@media only screen and (max-width: 445px){
-  .btnAgregarQuitar{
+@media only screen and (max-width: 445px) {
+  .btnAgregarQuitar {
     padding: 0;
   }
-  .tHeadFactura{
+
+  .tHeadFactura {
     font-size: 0.7rem;
   }
 
-  .btnLista{
+  .btnLista {
     width: 70%;
     font-size: 0.9rem;
   }
@@ -470,7 +472,7 @@ footer {
     padding: 10px 0;
   }
 
-  .btnLista{
+  .btnLista {
     width: 50%;
     font-size: 0.8rem;
     padding: 0;
@@ -490,9 +492,9 @@ footer {
     padding-bottom: 20%;
   }
 
-  .titulosSecciones{
+  .titulosSecciones {
     font-size: 2.5rem;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
   }
 
   footer {
@@ -514,31 +516,35 @@ footer {
 
   .rights {
     font-size: 0.7rem;
-    margin: 0 10px;;
+    margin: 0 10px;
   }
 
   /* FORM  */
 
-  .tHeadFactura{
+  .tHeadFactura {
     font-size: 0.6Rem;
   }
-  .btnAgregarQuitar{
+
+  .btnAgregarQuitar {
     width: 60%;
   }
-  #bodyTablaFactura{
+
+  #bodyTablaFactura {
     font-size: 0.7rem;
   }
 
-  .titulosSeccionesForm{
+  .titulosSeccionesForm {
     font-size: 1.5rem;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
   }
 
-  .textoOption{
+  .textoOption {
     font-size: 1rem;
-    };
-
-  .btnVaciar{
-      width: 10%;
-    }
   }
+
+  ;
+
+  .btnVaciar {
+    width: 10%;
+  }
+}

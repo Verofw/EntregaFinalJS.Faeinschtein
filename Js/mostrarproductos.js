@@ -3,12 +3,12 @@ const containerBuzos = document.querySelector('.containerBuzos');
 const containerTazas = document.querySelector('.containerTazas');
 const containerPosters = document.querySelector('.containerPosters');
 const containerStickers = document.querySelector('.containerStickers');
-let productos; 
+let productos;
 
 const busquedaInput = document.getElementById('busquedaInput');
 const buscarBoton = document.getElementById('buscarBoton');
 
-buscarBoton.addEventListener('click', function() {
+buscarBoton.addEventListener('click', function () {
     if (window.innerWidth <= 768) {
         // Si el ancho de la ventana es menor o igual a 768px, muestra/oculta el campo de búsqueda
         busquedaInput.style.display = (busquedaInput.style.display === 'none' || busquedaInput.style.display === '') ? 'block' : 'none';
@@ -29,9 +29,9 @@ async function mostrarProductos(condicion, contenedor) {
     if (!productos) {
         await obtenerProductos()
     };
-    
+
     contenedor.innerHTML = '';
-    
+
     productos.forEach((producto) => {
         if (condicion(producto)) {
             const tarjeta = document.createElement('div');
@@ -64,15 +64,19 @@ mostrarProductos(nombreSticker, containerStickers);
 function nombreRemera(producto) {
     return producto.nombre.toLowerCase().includes('remera');
 }
+
 function nombreBuzo(producto) {
     return producto.nombre.toLowerCase().includes('buzo');
 }
+
 function nombreTaza(producto) {
     return producto.nombre.toLowerCase().includes('taza');
 }
+
 function nombrePoster(producto) {
     return producto.nombre.toLowerCase().includes('poster');
 }
+
 function nombreSticker(producto) {
     return producto.nombre.toLowerCase().includes('sticker');
 }
@@ -80,15 +84,15 @@ function nombreSticker(producto) {
 // funcion checkout 
 const checkoutButton = document.querySelector("#checkout");
 
-    checkoutButton.addEventListener("click", () => {
-        if (carrito.length === 0) {
-            Toastify({
-                text: 'El carrito no tiene productos aún',
-                duration: 3000,
-                gravity: 'top',
-                position: 'center',
-            }).showToast();
-        } else {
-            window.location.href = "./pages/form.html"
-        }
-    });
+checkoutButton.addEventListener("click", () => {
+    if (carrito.length === 0) {
+        Toastify({
+            text: 'El carrito no tiene productos aún',
+            duration: 3000,
+            gravity: 'top',
+            position: 'center',
+        }).showToast();
+    } else {
+        window.location.href = "./pages/form.html"
+    }
+});

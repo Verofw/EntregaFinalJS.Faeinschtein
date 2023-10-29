@@ -233,6 +233,7 @@ vaciar.addEventListener ('click', () =>{
         }
     })
 })
+
 // Validacion campos general
 function validarDomicilio() {
     if (envio.checked) {

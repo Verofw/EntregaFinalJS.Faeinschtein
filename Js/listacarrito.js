@@ -1,4 +1,3 @@
-
 function dibujarTabla() {
     const bodyTabla = document.getElementById("bodyTabla");
     bodyTabla.innerHTML = ``;
@@ -20,23 +19,24 @@ function dibujarTabla() {
         `;
         bodyTabla.appendChild(tr);
 
-        function sweetAlertSeguridad (){
+        function sweetAlertSeguridad() {
             Swal.fire({
-            title: 'Seguro que desea eliminar el producto de su carrito?',
-            text: 'Esta acción no se puede deshacer',
-            icon: 'warning',
-            confirmButtonText: 'Aceptar',
-            confirmButtonColor: '#red',
-            showCancelButton: true,
-            cancelButtonText: 'Cancelar',
-            cancelButtonColor: '#grey',
-        }).then((result) => {
-            if (result.isConfirmed) {
-                carrito.splice(index, 1);
-                dibujarTabla();
-                localStorage.setItem('carrito', JSON.stringify(carrito));
-            }
-        })}
+                title: 'Seguro que desea eliminar el producto de su carrito?',
+                text: 'Esta acción no se puede deshacer',
+                icon: 'warning',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#red',
+                showCancelButton: true,
+                cancelButtonText: 'Cancelar',
+                cancelButtonColor: '#grey',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    carrito.splice(index, 1);
+                    dibujarTabla();
+                    localStorage.setItem('carrito', JSON.stringify(carrito));
+                }
+            })
+        }
 
         document.querySelector(`#sumarItem-${index}`).addEventListener('click', () => {
             carrito[index].cantidad++;
@@ -50,7 +50,7 @@ function dibujarTabla() {
                 sweetAlertSeguridad();
             }
         });
-        
+
         document.querySelector(`#eliminarFila-${index}`).addEventListener('click', () => {
             sweetAlertSeguridad()
         })
@@ -80,7 +80,7 @@ function dibujarTabla() {
             dibujarTabla();
         }
     })
-    
+
 
     const vaciarCarrito = document.querySelector("#vaciarCarrito");
     vaciarCarrito.addEventListener('click', () => {
@@ -115,4 +115,3 @@ function dibujarTabla() {
         }
     })
 }
-
