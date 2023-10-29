@@ -41,33 +41,34 @@
                         <a class="textoMenu text-decoration-none" href="../index.html">« Volver al shop</a>
                     </li>
             </div>
+            <div id="carritoIcon">
+                <div class="btn btn-light mr-2 ml-2"><i class="fa-solid fa-cart-shopping "></i></div>
+                <div class="table-responsive tablaFactura" id="contenedorTabla">
+                    <table class="table col-12 carritoLista" id="carritoLista">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="tHeadFactura">Producto</th>
+                                <th scope="col" class="tHeadFactura">Precio</th>
+                                <th scope="col" class="tHeadFactura">Uds</th>
+                                <th scope="col" class="tHeadFactura">Subtotal</th>
+                                <th scope="col" class="tHeadFactura"> Agregar/Quitar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bodyTabla">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
         </nav>
     </header>
 
     <body>
-        <main class="fondo">
-            <!-- tabla factura -->
-            <div class="table-responsive tablaFactura">
-                <table class="table table-striped table-dark mb-3 tHeadFactura">
-                    <thead>
-                        <tr>
-                            <th scope="col">Producto</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Uds</th>
-                            <th scope="col">Subtotal</th>
-                            <th scope="col">Agregar/Quitar</th>
-                        </tr>
-                    </thead>
-                    <tbody id="bodyTablaFactura">
-                        <!-- Contenido de la tabla -->
-                    </tbody>
-                </table>
-            </div>
-            
+        <main class="fondo">    
             <form class="bg-secondary text-white m-5 p-3">
                 <h2 class="titulosSecciones d-flex mt-2" id="form">Completá tu compra!</h2>
                 <form>
-                    <div class="row">
+                    <div class="row cajaDatos">
                         <div class="col">
                             <label for=""> Nombre *</label>
                             <input type="text" class="form-control cajaTexto" placeholder="Nombre" id="cajaNombre"
@@ -258,7 +259,7 @@
         <script src=https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.31/sweetalert2.min.js> </script> <!-- JS
             PROPIOS-->
         <script src = "../Js/item.js" ></script>
-        <script src="../Js/mostrarfactura.js"></script>
+        <script src="../Js/listacarrito.js"></script>
         <script src="../Js/forms.js"></script>
 
 

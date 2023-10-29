@@ -97,11 +97,9 @@ html {
   cursor: pointer;
 }
 
-#contenedorTabla {
-  z-index: 1000;
-}
 
 #carritoLista {
+  z-index: 1000;
   display: none;
   /* Oculto por defecto */
   position: absolute;
@@ -162,6 +160,10 @@ html {
   -moz-transform: scale3d(1.1, 1.1, 0.3);
 }
 
+#resultadosContainer{
+  background-color: #505050;
+}
+
 .titulosSecciones {
   font-family: "Big Shoulders Display", cursive;
   color: white;
@@ -187,10 +189,6 @@ html {
   color: white;
 }
 
-#dropdown {
-  background-color: white;
-  display: none;
-}
 
 footer {
   background: #232526;
@@ -264,13 +262,14 @@ footer {
 }
 
 
-/* FORM  */
-
 .tablaFactura{
   max-height: 400px;
   overflow: auto;
 }
 
+.cajaDatos{
+  z-index: 0 ;
+}
 @media only screen and (max-width: 1310px) {
   .laFabrica {
     margin-top: 10rem;
@@ -287,6 +286,7 @@ footer {
 }
 
 @media only screen and (max-width: 992px) {
+
   .container {
     width: 100%;
     flex-wrap: wrap;
@@ -396,8 +396,8 @@ footer {
     font-size: 1.5rem;
   }
 
-  #bodyTablaFactura{
-    font-size: 0.9rem;
+  #bodyTabla{
+    font-size: 0.7rem;
   }
 
   .btnAgregarQuitar{
@@ -414,7 +414,12 @@ footer {
     padding: 0;
   }
   .tHeadFactura{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .btnLista{
+    width: 70%;
+    font-size: 0.9rem;
   }
 }
 

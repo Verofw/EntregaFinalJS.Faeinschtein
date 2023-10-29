@@ -39,7 +39,7 @@ function mostrarResultados(resultados) {
 
     if (resultados.length === 0) {
         const h5 = document.createElement("h5");
-        h5.innerHTML = `<h5 class="sinResultados text-light">No se encontraron resultados.</h5>`;
+        h5.innerHTML = `<h5 class="sinResultados text-light m-2">No se encontraron resultados.</h5>`;
         resultadosContainer.appendChild(h5);
     } else {
         resultados.forEach((producto) => {
@@ -48,10 +48,12 @@ function mostrarResultados(resultados) {
             card.style.width = '18rem';
             card.innerHTML = `
             <img src="${producto.imagen}" class="card-img-top" alt="...">
-            <h5 class="card-title">${producto.nombre} // $${producto.precio}</h5>
-            <p class="card-text">${producto.detalle}</p>
-            <div class="botones d-flex"> 
-                <button class="btn btn-light carritoPush">Agregar al carrito</button>
+            <div class="card-body">
+                <h5 class="card-title tituloProductos">${producto.nombre} // $${producto.precio}</h5>
+                <p class="card-text">${producto.detalle}</p>
+                <div class="botones d-flex"> 
+                    <button class="btn btn-light carritoPush">Agregar al carrito</button>
+                </div>
             </div>`;
             resultadosContainer.appendChild(card);
 
