@@ -40,11 +40,12 @@ function dibujarTabla() {
 
         document.querySelector(`#sumarItem-${index}`).addEventListener('click', () => {
             carrito[index].cantidad++;
+            // dibujarTabla();
         });
         document.querySelector(`#quitarItem-${index}`).addEventListener('click', () => {
             if (carrito[index].cantidad > 1) {
                 carrito[index].cantidad--;
-
+                // dibujarTabla();
             } else {
                 sweetAlertSeguridad();
             }

@@ -23,6 +23,8 @@ const nombreTt = document.getElementById ("nombre-titular");
 const numeroTj = document.getElementById ("numero-tarjeta");
 const fechaVto = document.getElementById ("fecha-expiracion");
 const codigoTj = document.getElementById ("codigo-seguridad");
+const tipoTarjeta = document.getElementById("tipo-tarjeta");
+
 
 const cajasTexto = document.querySelectorAll (".cajaTexto");
 const vaciar = document.getElementById ("btnVaciar");
@@ -64,7 +66,7 @@ tarjeta.addEventListener('change', () => {
     }
 });
 
-var letrasRegex = /^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ]+$/;
+let letrasRegex = /^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ\s]+$/;
 
 function validarTexto (info) {
     if (!letrasRegex.test(info.value.trim())) {
@@ -192,16 +194,6 @@ function validarCodigo (){
 codigoTj.addEventListener ('blur', validarCodigo);
 
 
-let tipoTarjeta = document.getElementById("tipo-tarjeta");
-let otraTarjetaInput = document.getElementById("otra-tarjeta");
-
-tipoTarjeta.addEventListener("change", function () {
-    if (tipoTarjeta.value === "other") {
-        otraTarjetaInput.style.display = "block"; 
-    } else {
-        otraTarjetaInput.style.display = "none";
-    }
-});
 
 
 vaciar.addEventListener ('click', () =>{
@@ -241,7 +233,7 @@ vaciar.addEventListener ('click', () =>{
         }
     })
 })
-
+// Validacion campos general
 function validarDomicilio() {
     if (envio.checked) {
         let calleValida = validarTexto(cajaCalle);
@@ -252,16 +244,18 @@ function validarDomicilio() {
         return true;
     }
 }
-function validarTarjeta (){
-    if (tarjeta.checked){
+function validarTarjeta() {
+    if (tarjeta.checked) {
+        let nombreTarjeta = validarTexto(nombreTt);
         let numeroTarjetaValido = validarNroTj(numeroTj);
         let fechaVtoValida = validarVto(fechaVto);
         let codigoSeguridadValido = validarCodigo(codigoTj);
-        return numeroTarjetaValido && fechaVtoValida && codigoSeguridadValido;
-    } else if (efectivo.checked){
-        return true
+        return nombreTarjeta && numeroTarjetaValido && fechaVtoValida && codigoSeguridadValido;
+    } else if (efectivo.checked) {
+        return true;
+    }
 }
-}
+
 
 function validarCampos() {
     let nombreValido = validarTexto(cajaNombre);
@@ -269,7 +263,6 @@ function validarCampos() {
     let mailValido = validarCorreo();
     let domicilioValido = validarDomicilio();
     let tarjetaValida = validarTarjeta();
-
     return nombreValido && apellidoValido && mailValido && domicilioValido && tarjetaValida;
 }
 
@@ -296,7 +289,6 @@ function pagarOk() {
                 window.location.href = '../index.html';
             }
         });
-        carrito.length = 0;
         localStorage.clear();
         dibujarTabla();
     } 
