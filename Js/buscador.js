@@ -91,7 +91,6 @@ function mostrarResultados(resultados) {
                 localStorage.setItem('carrito', JSON.stringify(carrito));
                 dibujarTabla();
             });
-            // resultadosContainer.appendChild(card); esta duplicado, por eso lo comento, por si no llega a funcionar algo lo dejo 
         });
     }
 }

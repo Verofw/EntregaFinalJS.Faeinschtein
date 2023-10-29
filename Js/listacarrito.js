@@ -20,7 +20,6 @@ function dibujarTabla() {
         `;
         bodyTabla.appendChild(tr);
 
-        //creo una funcion ya que lo uso dos veces en el proceso de eliminacion de productos este filtro
         function sweetAlertSeguridad (){
             Swal.fire({
             title: 'Seguro que desea eliminar el producto de su carrito?',
@@ -41,12 +40,11 @@ function dibujarTabla() {
 
         document.querySelector(`#sumarItem-${index}`).addEventListener('click', () => {
             carrito[index].cantidad++;
-            // dibujarTabla();
         });
         document.querySelector(`#quitarItem-${index}`).addEventListener('click', () => {
             if (carrito[index].cantidad > 1) {
                 carrito[index].cantidad--;
-                // dibujarTabla();
+
             } else {
                 sweetAlertSeguridad();
             }

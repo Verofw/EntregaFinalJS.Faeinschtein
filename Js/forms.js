@@ -30,7 +30,6 @@ const pagar = document.getElementById ("btnPagar");
 
 
 
-// Mostrar información de retiro en sucursal y ocultar formulario de envío al inicio
 textoRetiro.style.display = 'none';
 formEnvio.style.display = 'block';
 
@@ -48,7 +47,6 @@ envio.addEventListener('change', () => {
     }
 });
 
-// Mostrar información de pago
 textoEfectivo.style.display = 'block';
 datosTj.style.display = 'none';
 
@@ -243,7 +241,7 @@ vaciar.addEventListener ('click', () =>{
         }
     })
 })
-// Validacion campos general
+
 function validarDomicilio() {
     if (envio.checked) {
         let calleValida = validarTexto(cajaCalle);
@@ -311,7 +309,3 @@ pagar.addEventListener('click', function(event) {
 });
 
 
-
-
-
-// despues me falta cargar aca la api con el pais/provincia/localidades

@@ -99,7 +99,7 @@ html {
 
 #carritoLista {
   z-index: 1000;
-  display: none; /* Oculto por defecto */
+  display: none;
   position: absolute;
   top: 100%;
   color: #f5fcff;

@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // No poner el obtenerproductos async await aca porque sino no me detecta siquiera 1 boton para agregar carrito !!!!
     traerItemsStorage();
     dibujarTabla();
 });
 
-// Agregue esta funcion para saber si el localStorage tiene data y prevenir error SyntaxError: JSON.parse con el que me inicia en consola
+// Agregue esta funcion asi para saber si el localStorage tiene data y prevenir error SyntaxError: JSON.parse con el que me iniciaba la consola
 function traerItemsStorage() {
     const carritoData = localStorage.getItem('carrito');
     if (carritoData) {
@@ -26,7 +25,6 @@ let carrito = [];
 let totalCarrito = 0;
 
 async function comprarCarrito() {
-    // Obtener productos aquí, después de la inicialización del carrito
     if (!productos) {
         await obtenerProductos();
     }
