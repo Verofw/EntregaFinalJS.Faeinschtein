@@ -77,4 +77,18 @@ function nombreSticker(producto) {
     return producto.nombre.toLowerCase().includes('sticker');
 }
 
+// funcion checkout 
+const checkoutButton = document.querySelector("#checkout");
 
+    checkoutButton.addEventListener("click", () => {
+        if (carrito.length === 0) {
+            Toastify({
+                text: 'El carrito no tiene productos aún',
+                duration: 3000,
+                gravity: 'top',
+                position: 'center',
+            }).showToast();
+        } else {
+            window.location.href = "./pages/form.html"
+        }
+    });

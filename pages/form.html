@@ -40,33 +40,35 @@
                     <li class="nav-item btn">
                         <a class="textoMenu text-decoration-none" href="../index.html">« Volver al shop</a>
                     </li>
-            </div>
-            <div id="carritoIcon">
-                <div class="btn btn-light mr-2 ml-2"><i class="fa-solid fa-cart-shopping "></i></div>
-                <div class="table-responsive tablaFactura" id="contenedorTabla">
-                    <table class="table col-12 carritoLista" id="carritoLista">
-                        <thead>
-                            <tr>
-                                <th scope="col" class="tHeadFactura">Producto</th>
-                                <th scope="col" class="tHeadFactura">Precio</th>
-                                <th scope="col" class="tHeadFactura">Uds</th>
-                                <th scope="col" class="tHeadFactura">Subtotal</th>
-                                <th scope="col" class="tHeadFactura"> Agregar/Quitar</th>
-                            </tr>
-                        </thead>
-                        <tbody id="bodyTabla">
-                        </tbody>
-                    </table>
+                </ul>
+                    <div id="carritoIcon">
+                        <div class="btn btn-light mr-2 ml-2"><i class="fa-solid fa-cart-shopping "></i></div>
+                        <div class="table-responsive tablaFactura" id="contenedorTabla">
+                            <table class="table col-12" id="carritoLista">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="tHeadFactura">Producto</th>
+                                        <th scope="col" class="tHeadFactura">Precio</th>
+                                        <th scope="col" class="tHeadFactura">Uds</th>
+                                        <th scope="col" class="tHeadFactura">Subtotal</th>
+                                        <th scope="col" class="tHeadFactura"> Agregar/Quitar</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bodyTabla">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            
         </nav>
     </header>
 
     <body>
         <main class="fondo">    
             <form class="bg-secondary text-white m-5 p-3">
-                <h2 class="titulosSecciones d-flex mt-2" id="form">Completá tu compra!</h2>
+                <h2 class="titulosSeccionesForm d-flex mt-2" id="form">Completá tu compra!</h2>
                 <form>
                     <div class="row cajaDatos">
                         <div class="col">
@@ -86,7 +88,7 @@
                     </div>
                 </form>
 
-                <h5 class="titulosSecciones d-flex mt-4"> Cómo querés recibir tu compra?</h5>
+                <h5 class="titulosSeccionesForm d-flex mt-4"> Cómo querés recibir tu compra?</h5>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
@@ -140,7 +142,7 @@
                     </div>
                 </div>
 
-                <h5 class="titulosSecciones d-flex mt-4" id="formPago">Cómo deseas pagar tu compra?</h5>
+                <h5 class="titulosSeccionesForm d-flex mt-4" id="formPago">Cómo deseas pagar tu compra?</h5>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
@@ -180,27 +182,28 @@
                             </div>
                             <!-- div para cargar tarjeta  -->
                             <form id="cargaTarjeta" class="bg-secondary text-white p-4 mr-5 ml-5">
-                                <div class="row"> <label for="nombre-titular">Nombre del Titular*</label>
+                                <div class="row"> 
+                                    <label for="nombre-titular" class="mr-2">Nombre del Titular*</label>
                                     <input type="text" id="nombre-titular" name="nombre-titular" class="cajaTexto" required> </div>
                                 <br>
                                 <div class="row">
-                                    <label for="numero-tarjeta">Número de Tarjeta*</label>
+                                    <label for="numero-tarjeta" class="mr-2">Número de Tarjeta*</label>
                                     <input type="text" id="numero-tarjeta" name="numero-tarjeta" required>
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <label for="fecha-expiracion">Fecha de Vto*</label>
+                                    <label for="fecha-expiracion" class="mr-2">Fecha de Vto*</label>
                                     <input type="text" id="fecha-expiracion" name="fecha-expiracion" placeholder="MM/YY"
                                         required>
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <label for="codigo-seguridad">Código de Seguridad (CVV)*</label>
+                                    <label for="codigo-seguridad" class="mr-2">Código de Seguridad (CVV)*</label>
                                     <input type="text" id="codigo-seguridad" name="codigo-seguridad" required>
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <label for="tipo-tarjeta">Tipo de Tarjeta:</label>
+                                    <label for="tipo-tarjeta" class="mr-2">Tipo de Tarjeta:</label>
                                     <select id="tipo-tarjeta" name="tipo-tarjeta">
                                         <option value="visa">Visa</option>
                                         <option value="mastercard">MasterCard</option>

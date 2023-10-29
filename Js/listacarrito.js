@@ -67,11 +67,7 @@ function dibujarTabla() {
                 
             </td>
         </tr>
-        <tr>
-            <td>
-            <button type="button" class="btn btn-primary btnLista" id="checkout">CheckOut</button>
-            </td>
-        </tr>
+        
     `;
     bodyTabla.appendChild(tfoot);
 
@@ -87,20 +83,7 @@ function dibujarTabla() {
             dibujarTabla();
         }
     })
-    const checkoutButton = document.querySelector("#checkout");
-
-    checkoutButton.addEventListener("click", () => {
-        if (carrito.length === 0) {
-            Toastify({
-                text: 'El carrito no tiene productos aún',
-                duration: 3000,
-                gravity: 'top',
-                position: 'center',
-            }).showToast();
-        } else {
-            window.location.href = "./pages/form.html"
-        }
-    });
+    
 
     const vaciarCarrito = document.querySelector("#vaciarCarrito");
     vaciarCarrito.addEventListener('click', () => {
