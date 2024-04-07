@@ -17,7 +17,7 @@ buscarBoton.addEventListener('click', function () {
 
 
 async function obtenerProductos() {
-    const response = await fetch('../productos.json');
+    const response = await fetch('./productos.json');
     if (response.ok) {
         productos = await response.json();
         return productos;
